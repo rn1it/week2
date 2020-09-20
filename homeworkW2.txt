@@ -1,0 +1,38 @@
+1.	What is Inheritance? Try to explain in Mandarin. 
+	Inheritance意思是繼承，當A類別繼承B類別時，A為子類別，
+	B為父類別，A擁有B類別的所有可繼承的方法，如果沒有override，
+	則呼叫富類別的方法。
+2.	How to split a string in Android? Explain your understanding, and even better to attach some sample code. 
+	val str = "Hi, my name is Gary"
+	for (s in str.split(" ")){
+    println(s)
+	}
+	宣告一個型態為字串的變數，呼叫split方法，該方法內的參數為要分割的串，
+	回傳為一個list<String>，上述印出的結果為:
+	Hi,
+	my
+	name
+	is
+	Gary
+
+3.	What kind of key-value pair collection do we use in Android? Attach a sample code that uses for-loop to print each key-value pair. 
+	使用map 來蒐集pair :
+	val mapAge: Map<String, Int> =
+        mapOf("A" to 10, "B" to 20, "C" to 30)
+	for(i in mapAge){
+		println("${i.key}:${i.value}")
+	}
+	印出
+	A:10
+	B:20
+	C:30
+
+4.	What’s the difference between ArrayList and LinkedList? Try to explain in Mandarin.
+	ArrayList使用陣列來蒐集內部的集合物件，在指定index取得物件時較快速，
+	但在插入或刪除其中的物件時會效能會比較差；LinkedList使用Node 來蒐集內部的物件，
+	要取得特定index的物件時都必須從第一個物件科使算起，用於查詢相對費時，但做新增、刪除或調整物件順序時，效率會較
+	ArrayList來的好。
+5.	What are Value Type variables? List out the Value Type variables you know. 
+	為資料的基本型態，包含:byte、short、int、long、float、double、boolean、char
+6.	What’s the maximum value of Int? If you want to represent integers larger than the limit, what should you do instead of using int variables?
+	Int的上下限為-2147473648到2147483647，計算時若超過會從尾端重新循環，要超過做大值須使用long型態來宣告
